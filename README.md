@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/duereg/too-wordy.svg?branch=master)](https://travis-ci.org/duereg/too-wordy)
 [![NPM version](https://badge.fury.io/js/too-wordy.svg)](http://badge.fury.io/js/too-wordy)
 
-# Word Complexity
+# set-single-timeout
 
-// This pattern is used for preventing concurrent scheduling of a task when multiple events fire in a short interval.
-// This effectively acts as a debounce for the task, except that the task will continue to delay as more requests come in.
+This pattern is used for preventing concurrent scheduling of a task when multiple events fire in a short interval.
+This effectively acts as a debounce for the task, except that the task will continue to delay as more requests come in.
 
 
 ## Install
