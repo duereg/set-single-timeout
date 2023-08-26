@@ -21,7 +21,7 @@ const setSingleTimeout = require('set-single-timeout');
 // config is optional.
 const config = {
   eventName: 'sendWindowsSoftwareUpdateReport', // if set & logger is set, used in debugging
-  logger: console.log,  // if set, debug information is outut of loop progress
+  logger: console.log,  // if set, debug information is output on progress
 }
 
 // Timeout key. Will
