@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/duereg/set-single-timeout.svg?branch=master)](https://travis-ci.org/duereg/set-single-timeout)
 [![NPM version](https://badge.fury.io/js/set-single-timeout.svg)](http://badge.fury.io/js/set-single-timeout)
 
 # set-single-timeout
