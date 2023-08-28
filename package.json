@@ -1,6 +1,6 @@
 {
   "name": "set-single-timeout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set a single idempotent timeout",
   "main": "index.js",
   "homepage": "https://github.com/duereg/set-single-timeout",
@@ -37,5 +37,8 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.14.0",
     "jasmine": "^5.1.0"
+  },
+  "dependencies": {
+    "sinon": "^15.2.0"
   }
 }

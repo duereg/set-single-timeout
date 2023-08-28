@@ -1,3 +1,4 @@
+const sinon = require('sinon');
 const setSingleTimeout = require('../index');
 
 describe('set-single-timeout', () => {
@@ -86,10 +87,14 @@ describe('set-single-timeout', () => {
   });
 
   describe('full config', () => {
-    let timeoutId, callback, timeouter;
+    let timeoutId, callback, timeouter, logger;
 
     beforeEach((done) => {
-      timeouter = setSingleTimeout({ logger() {}, eventName: 'test' });
+      logger = sinon.stub();
+      timeouter = setSingleTimeout({
+        logger,
+        eventName: 'test'
+      });
       callback = () => {
         expect(true).toBe(true);
         done();
@@ -103,6 +108,14 @@ describe('set-single-timeout', () => {
 
     it('timeoutId is generated', () => {
       expect(timeoutId).not.toBe(undefined);
+    });
+
+    it('logger is called', () => {
+      expect(logger.called).toBe(true);
+    });
+
+    it('logger is called with eventName', () => {
+      expect(logger.calledWith('[test] setSingleTimeout init')).toBe(true);
     });
   });
 });
