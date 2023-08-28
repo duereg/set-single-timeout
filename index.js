@@ -19,8 +19,8 @@ function getLogger(config) {
   }
 
   if (eventName) {
-    return function innerLogger(...args) {
-      logger(`[${eventName}]`, ...args);
+    return function innerLogger(arg) {
+      logger(`[${eventName}] ${arg}`);
     };
   }
 

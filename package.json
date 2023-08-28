@@ -37,5 +37,8 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.14.0",
     "jasmine": "^5.1.0"
+  },
+  "dependencies": {
+    "sinon": "^15.2.0"
   }
 }
