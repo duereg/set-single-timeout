@@ -27,15 +27,9 @@
     "npm": ">=8"
   },
   "keywords": [
-    "english",
-    "writing",
-    "prose",
-    "words",
-    "complexity",
-    "readability",
-    "grammar",
-    "wordiness",
-    "wordy"
+    "setTimeout",
+    "idempotent",
+    "singleton"
   ],
   "license": "MIT",
   "devDependencies": {
