@@ -24,7 +24,7 @@
   },
   "engines": {
     "node": ">=14",
-    "npm": ">=8"
+    "npm": ">=5.8.0"
   },
   "keywords": [
     "setTimeout",
