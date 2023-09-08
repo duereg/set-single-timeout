@@ -5,6 +5,13 @@
 This pattern is used for preventing concurrent scheduling of a task when multiple events fire in a short interval.
 This effectively acts as a debounce for the task, except that the task will continue to delay as more requests come in.
 
+## Why? Why not use `lodash.debouce` or something similar?
+
+I looked at both [lodash](https://lodash.com/docs/4.17.15#debounce) debounce and other [setTimeout libraries](https://www.npmjs.com/search?q=setTimeout) that were available, and I couldn't find one that did exactly what I wanted. My use case is around having an idempotent instance of a setTimeout call, no matter how many instances of a particular object were held in memory by the application.
+
+Example: You have five instances of the same object listening to the same event, and they all have a method wrapped in a debounce. If you fire that event multiple times, even if you debounce, you'll still get five event fires.
+
+I was looking for something that would only fire once, even if it was used in multiple instances. Hence this little library.
 
 ## Install
 
