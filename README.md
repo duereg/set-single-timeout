@@ -13,6 +13,11 @@ Example: You have five instances of the same object listening to the same event,
 
 I was looking for something that would only fire once, even if it was used in multiple instances. Hence this little library.
 
+## Will this solve the issue with [node leaking memory](https://lucumr.pocoo.org/2024/6/5/node-timeout/) on `setTimeout` usage?
+
+Yes. This library effectively manages the memory of these tasks, and will wipe out the reference to the object when the timeout completes.
+However, the more durable fix (converted the timeout object into a primative) only [just landed](https://github.com/nodejs/node/pull/53337), so this library will continue to manage the object state until that patch rolls out to the wider world.
+
 ## Install
 
 ```shell
